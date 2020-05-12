@@ -19,11 +19,9 @@ def get_topics(topic):
     '''
     function gets and returns articles that cover a specific topic
     '''
-    print('here')
-    print(apiKey)
+    
     topical_url="https://newsapi.org/v2/everything?q={}&apiKey={}".format(topic,apiKey)
-    print(topical_url)
-    print('here1')
+    
 
     with urllib.request.urlopen(topical_url) as url:
         topic_details_data =  url.read()
