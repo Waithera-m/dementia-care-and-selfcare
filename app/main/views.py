@@ -20,5 +20,16 @@ def dementia():
     view function returns dementia template and its contents
     '''
     dementia_list = get_topics('dementia')
+
+    title='news'
     
-    return render_template('dementia.html',dementia_list=dementia_list)
+    return render_template('dementia.html',dementia_list=dementia_list,title=title)
+
+@main.route('/dementia_care')
+def dementia_care():
+
+    '''
+    view function returns dementia_care template and its contents
+    '''
+    title = 'dementia care'
+    return render_template('dementia_care.html',title=title)
