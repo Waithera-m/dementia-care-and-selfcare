@@ -1,3 +1,3 @@
-SECRET_KEY='conanneedsafriendandsonaisawesome'
-MAIL_USERNAME='watchlist.flask@gmail.com'
-MAIL_PASSWORD='pushjumanji18'
+SECRET_KEY='c26d6bde3e77e96c634e8a88fd857560'
+MAIL_USERNAME='jnganga288@gmail.com'
+MAIL_PASSWORD='Kenyacom25'
