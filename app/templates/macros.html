@@ -1,0 +1,17 @@
+{% macro displayHeadlinesResults(dementia_list) %}
+    {% for article in dementia_list %}
+        <div class="card" style="width: 50rem">
+            <img src="{{article.urlToImage}}" class="card-img-top img-responsive" height=500 width=550>
+            <div class="card-title">
+                <h3><i>{{article.title}}</i></h3>
+                
+            </div>
+            <div class="card-body">
+                <h5><i>{{article.publishedAt | truncate(13)}}</i></h5>
+                <p>{{article.description}}</p>
+                <a href="{{article.url}}" target="_blank">Read Full Article</a>
+            </div>
+            <hr>
+        </div>
+    {% endfor %}
+{% endmacro %}
