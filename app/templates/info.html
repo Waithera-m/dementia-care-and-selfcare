@@ -2,18 +2,16 @@
 
 {% block styles %}
 {{super()}}
-<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
 {% endblock %}
 
 {% block content %}
 <br><br>
-<div class="about">
-<div style="background-color: plum;">
+<div class ="info" ><br>
     <h1 class="text-center" >Alzheimer's & Dementia </h1>
 </div><hr>
 <div class="container">
-    <h2 >What is Dimentia?</h2>
+    <h2 >What is Dimentia</h2>
     <p>Dimentia is a group of symptoms that affects mental cognitive tasks such as memory and reasoning.It is a
         progressive disease that destroys memory and other important mental functions.</p>
     <p>Although dementia mainly affects older people, it is not a normal part of ageing.</p>
@@ -53,20 +51,20 @@
     <h2 > Treatment and care</h2>
     <p>There is no treatment currently available to cure dementia or to alter its progressive course. .</p>
     <p>However, much can be offered to support and improve the lives of people with dementia such as :</p>
-    <ul>
+    <ol>
         <li><b>Enhance communication:</b> By talking with your loved one, maintain eye contact. Speak slowly in simple
             sentences, and don't rush the response.</li>
         <li><b>Engage in Therapy</b> such as art, music and pet therapy.</li>
         <li><b>Encourage exercise:</b> Exercise improves strength and balance. </li>
         <li>Your doctor might prescribe medications to treat other symptoms or conditions, such as depression, sleep
             disturbances or agitation.</li>
-    </ul>
+    </ol>
 
-    <blockquote>
+    <blockquote class="quote-box text-center primary-color">
         <p>I’m a person. I have thoughts, emotions, wishes, and needs.
             When you label me a ‘patient,’ ‘victim,’ or ‘sufferer,’ I feel minimized.
-            My choices, self-determination, dignity, and privacy are fundamental to my well-being. Therefore I may need
-            and welcome your support, but please do not substitute your decisions for mine</p>
+            My choices, self-determination, dignity, and privacy are fundamental to my well-being. 
+            Therefore I may need and welcome your support, but please do not substitute your decisions for mine</p>
     </blockquote>
 
     <p>For more information you can check out:
@@ -78,5 +76,5 @@
         </ul>
     </p>
 </div>
-</div>
+
 {% endblock %}
