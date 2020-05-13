@@ -1,25 +1,24 @@
 {% extends 'base.html' %}
 
-
 {% block styles %}
 {{super()}}
 <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
 {% endblock %}
 
 {% block content %}
-<br>
+<br><br>
+<div class="about">
 <div style="background-color: plum;">
-    <h1 class="text-center">Alzheimer's & Dementia </h1>
-    <hr><br>
-</div>
+    <h1 class="text-center" >Alzheimer's & Dementia </h1>
+</div><hr>
 <div class="container">
-    <br><br>
-    <h1 class="text-center">What is Dimentia?</h1>
+    <h2 >What is Dimentia?</h2>
     <p>Dimentia is a group of symptoms that affects mental cognitive tasks such as memory and reasoning.It is a
         progressive disease that destroys memory and other important mental functions.</p>
     <p>Although dementia mainly affects older people, it is not a normal part of ageing.</p>
 
-    <h2 class="text-center">Causes of Dimentia</h2>
+    <h2>Causes of Dimentia</h2>
     <p>Dementia is caused by damage to or loss of nerve cells and their connections in the brain.</p>
     <p><strong>Risk factors</strong></p>
     <ul>
@@ -30,7 +29,7 @@
         <li>Lifestyle and heart health: Obesity, High blood pressure and Exposure to smoking and drugs.</li>
     </ul>
 
-    <h2 class="text-center">Stages of Dimentia</h2>
+    <h2 >Stages of Dimentia</h2>
     <p>Understanding each stage can help make these transitions a little easier on you and your loved one</p>
     <h4><strong>Stage 1</strong>:&nbsp;<strong>No impairment</strong></h4>
     <p>In this stage there are no symptoms of cognitive impairment, mental function is normal</p>
@@ -51,7 +50,7 @@
     <p>In this stage,your loved one is unable to care for themselves, lives with severe motor and communication
         impairment, and may lose the ability to speak or walk.</p>
 
-    <h2 class="text-center"> Treatment and care</h2>
+    <h2 > Treatment and care</h2>
     <p>There is no treatment currently available to cure dementia or to alter its progressive course. .</p>
     <p>However, much can be offered to support and improve the lives of people with dementia such as :</p>
     <ul>
@@ -79,5 +78,5 @@
         </ul>
     </p>
 </div>
-
+</div>
 {% endblock %}
