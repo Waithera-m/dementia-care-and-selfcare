@@ -4,12 +4,10 @@ from flask_bootstrap import Bootstrap
 from flask_sqlalchemy import SQLAlchemy
 from flask_mail import Mail
 from flask_wtf.csrf import CSRFProtect
-from flask_uploads import UploadSet,configure_uploads,IMAGES
 from flask_simplemde import SimpleMDE
 
 simplemde = SimpleMDE()
 
-photos = UploadSet('photos',IMAGES)
 
 csrf = CSRFProtect()
 
@@ -30,9 +28,7 @@ def create_app(config_name):
     #configurations creation
     app.config.from_object(config_options[config_name])
 
-    #configure UploadSet
-    configure_uploads(app,photos)
-
+   
     #extensions initialization
     bootstrap.init_app(app)
     db.init_app(app)
