@@ -14,9 +14,14 @@ def index():
 
 @main.route('/about')
 def about():
+    return render_template('about.html',title='About us')
+
+@main.route('/info')
+def info():
 
     '''
     view function returns index template and its contents
     '''
+    title='Information on Dimensia'
     
-    return render_template('about.html',title='About us')
+    return render_template('info.html',title=title)
