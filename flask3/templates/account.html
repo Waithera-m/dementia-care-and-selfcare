@@ -1,6 +1,10 @@
 {% extends 'bootstrap/base.html' %}
 {% block navbar %}
     {% include 'navbar.html' %}
+
+    <main role="main" class="container">
+        <div class="row">
+          <div class="col-md-8">
     <div class="content-section">
         <div class="media">
           <img class="rounded-circle account-img" src="{{ image_file }}">
@@ -55,4 +59,7 @@
               </div>
           </form>
       </div>
+          </div>
+        </div>
+    </main>
 {% endblock %}

@@ -1,6 +1,11 @@
 {% extends 'bootstrap/base.html' %}
 {% block navbar %}
 {% include 'navbar.html' %}
+
+<main role="main" class="container">
+    <div class="row">
+      <div class="col-md-8">
+
 <div class="content-section">
     <form method="POST" action="">
         {{ form.hidden_tag() }}
@@ -50,4 +55,36 @@
         Need An Account? <a class="ml-2" href="{{ url_for('register') }}">Sign Up Now</a>
     </small>
 </div>
+
+
+
+      </div>
+      <div class="col-md-4">
+        <div class="content-section">
+          <h3>Signing in with</h3>
+          <p class='text-muted'>
+            <ul class="list-group">
+                <img src="https://bit.ly/2YNMS7l" width="109" style="border-radius:50%;">
+                <img src="https://bit.ly/2zpKwR8" width="109" style="border-radius:50%;">
+                <img src="https://bit.ly/2zs8FGI" width="109" style="border-radius:50%;">
+                <img src="https://bit.ly/2WH6yqx" width="109" style="border-radius:50%;">
+                
+                <div class="icon">
+                    <span>
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="#" class="fa fa-twitter"></a>
+                        <a href="#" class="fa fa-google"></a>
+                        <a href="#" class="fa fa-linkedin"></a>
+                        <a href="#" class="fa fa-youtube"></a>
+                    </span>
+                </div>
+            </ul>
+          </p>
+        </div>
+      </div>
+    </div>
+      
+    </div>
+    
+</main>
 {% endblock %}

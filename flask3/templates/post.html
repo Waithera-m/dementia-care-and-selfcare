@@ -1,6 +1,9 @@
 {% extends 'bootstrap/base.html' %}
 {% block navbar %}
 {% include 'navbar.html' %}
+<main role="main" class="container">
+  <div class="row">
+    <div class="col-md-8">
 <article class="media content-section">
   <img class="rounded-circle article-img"
     src="{{ url_for('static', filename='profile_pics/' + post.author.image_file) }}">
@@ -81,4 +84,7 @@
     </div>
   </div>
 </div>
+    </div>
+  </div>
+</main>
 {% endblock %}

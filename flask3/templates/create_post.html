@@ -1,6 +1,9 @@
 {% extends 'bootstrap/base.html' %}
 {% block navbar %}
     {% include 'navbar.html' %}
+    <main role="main" class="container">
+        <div class="row">
+          <div class="col-md-8">
     <div class="content-section">
         <form method="POST" action="">
             {{ form.hidden_tag() }}
@@ -38,4 +41,7 @@
             </div>
         </form>
     </div>
+          </div>
+        </div>
+    </main>
 {% endblock %}
