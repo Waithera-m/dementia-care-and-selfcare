@@ -37,24 +37,27 @@ Behavior                 |Input                            |Output              
 * flask-mail
 * flask-sqlalchemy
 * sqlite
-First clone the repo
+
+#### Setup
+
+* First clone the repo
    ```$ git clone https://github.com/Waithera-m/dementia-care-and-selfcare.git ```
 
-After cloning, navigate to the project:
+* After cloning, navigate to the project:
    `` $ cd dementia-care-and-selfcare``
 
-Set up a virtual environment
+* Set up a virtual environment
 
-Then install all the requirements through pip:
+* Then install all the requirements through pip:
    ```$ pip install -r requirements.txt ```
 
-Make the file executable:
+* Make the file executable:
    ```$ chmod +x start.sh```
 
-Run the application:
+* Run the application:
    ```$ ./start.sh ```
 
-Now navigate to your browser at: ```localhost:5000```
+* Now navigate to your browser at: ```localhost:5000```
 
 
 ## Technologies Used
