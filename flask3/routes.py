@@ -3,6 +3,7 @@ import secrets
 
 from flask import render_template,url_for,flash, redirect,request,abort
 from flask3 import app,db,bcrypt
+from flask3.forms import RegistrationForm, LoginForm,UpdateAccountForm,PostForm,CommentForm
 
 from flask3.models import DementiaNews,User,Post,Comment
 from flask3.request import get_topics
@@ -49,7 +50,12 @@ def selfcare():
     title='selfcare'
     return render_template('selfcare.html',title=title)
 
-
+@app.route('/home')
+def home():
+    page = request.args.get('page', 1, type=int)
+    posts = Post.query.order_by(Post.date_posted.desc()).paginate(page=page, per_page=5)
+   
+    return render_template('home.html',posts= posts)
 
 
 @app.route('/register',methods=['GET','POST'])
@@ -136,12 +142,18 @@ def new_post():
                            form=form, legend='New Post')
 
 
-@app.route("/post/<int:post_id>")
+@app.route("/post/<int:post_id>", methods=["POST", "GET"])
 def post(post_id):
     post = Post.query.get_or_404(post_id)
-    return render_template('post.html', title=post.title, post=post)
-
-
+    comments = Comment.query.all()
+    form = CommentForm()
+    if form.validate_on_submit():
+        comments = Comment(content=form.content.data, author=current_user)
+        db.session.add(comments)
+        db.session.commit()
+        flash('Your comment has been created!', 'success')
+        return redirect(url_for('home'))
+    return render_template('post.html', title=post.title, post=post, form=form, comments=comments)
 @app.route("/post/<int:post_id>/update", methods=['GET', 'POST'])
 @login_required
 def update_post(post_id):
@@ -160,8 +172,6 @@ def update_post(post_id):
         form.content.data = post.content
     return render_template('create_post.html', title='Update Post',
                            form=form, legend='Update Post')
-
-
 @app.route("/post/<int:post_id>/delete", methods=['POST'])
 @login_required
 def delete_post(post_id):
@@ -172,7 +182,6 @@ def delete_post(post_id):
     db.session.commit()
     flash('Your post has been deleted!', 'success')
     return redirect(url_for('home'))
-    
 @app.route("/user/<string:username>")
 def user_posts(username):
     page = request.args.get('page', 1, type=int)
@@ -181,25 +190,3 @@ def user_posts(username):
         .order_by(Post.date_posted.desc())\
         .paginate(page=page, per_page=5)
     return render_template('user_posts.html', posts=posts, user=user)
-
-@app.route('/post/comments',methods=['GET','POST'])
-@login_required
-def comments():    
-    form= CommentsForm()  
-    if form.validate_on_submit():
-        new_comment = Comment(title=form.title.data, content=form.content.data, author=current_user)
-        db.session.add(new_comment)
-        db.session.commit()
-        flash('Your comment has been created!','success')
-        return redirect(url_for('main.home'))
-    return render_template('comments.html',title='Comment',form=form, legend='New comment', quotes=quotes)
-
-
-
-
-
-
-
-
-
-    
