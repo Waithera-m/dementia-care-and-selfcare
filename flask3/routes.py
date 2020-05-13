@@ -40,6 +40,15 @@ def dementia_care():
     title = 'dementia care'
     return render_template('dementia_care.html',title=title)
 
+@app.route('/selfcare')
+def selfcare():
+
+    '''
+    view function returns selfcare template and its contents
+    '''
+    title='selfcare'
+    return render_template('selfcare.html',title=title)
+
 
 
 
