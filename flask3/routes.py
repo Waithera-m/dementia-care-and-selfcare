@@ -1,9 +1,15 @@
-from flask import render_template,request,url_for,abort,redirect
-from . import main
-from ..request import get_topics
+import os
+import secrets
+
+from flask import render_template,url_for,flash, redirect,request,abort
+from flask3 import app
+
+from flask3.models import DementiaNews
+from flask3.request import get_topics
 
 
-@main.route('/')
+
+@app.route('/')
 def index():
 
     '''
@@ -13,7 +19,7 @@ def index():
     
     return render_template('index.html',title=title)
 
-@main.route('/dementia')
+@app.route('/dementia')
 def dementia():
 
     '''
@@ -25,7 +31,7 @@ def dementia():
     
     return render_template('dementia.html',dementia_list=dementia_list,title=title)
 
-@main.route('/dementia_care')
+@app.route('/dementia_care')
 def dementia_care():
 
     '''
@@ -33,3 +39,18 @@ def dementia_care():
     '''
     title = 'dementia care'
     return render_template('dementia_care.html',title=title)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    

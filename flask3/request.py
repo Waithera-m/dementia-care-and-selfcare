@@ -1,26 +1,13 @@
 import urllib.request,json
 from .models import DementiaNews
 
-
-apiKey = None
-
-def configure_request(app):
-
-    '''
-    function facilitates the assignation of values to the apiKey and url variables
-    '''
-    global apiKey
-
-    apiKey = app.config['NEWS_API_KEY']
-
-
 def get_topics(topic):
 
     '''
     function gets and returns articles that cover a specific topic
     '''
     
-    topical_url="https://newsapi.org/v2/everything?q={}&apiKey={}".format(topic,apiKey)
+    topical_url="https://newsapi.org/v2/everything?q={}&apiKey={}".format(topic,'57e1ca302331442e8be2e0e5c0cfe307')
     
 
     with urllib.request.urlopen(topical_url) as url:
