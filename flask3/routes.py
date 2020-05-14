@@ -49,6 +49,21 @@ def selfcare():
     title='selfcare'
     return render_template('selfcare.html',title=title)
 
+@app.route('/about')
+def about():
+    title='About Us'
+    return render_template('about.html',title=title)
+
+@app.route('/info')
+def info():
+
+    '''
+    view function returns index template and its contents
+    '''
+    title='Information on Dimentia'
+    
+    return render_template('info.html',title=title)
+
 
 
 
