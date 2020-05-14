@@ -15,15 +15,21 @@ Dementia Care & Selfcare is a simple application tailored to meet the needs of d
 * None at the moment
 
 ## Behavior Driven Development (BDD)
+
+![image](https://user-images.githubusercontent.com/60571734/81957194-ee50b380-9614-11ea-9878-33e028357f9d.png)
+
 Behavior                 |Input                            |Output                             |
 |------------------------|----------------------------------|----------------------------------|
 |The landing page loads  |Users scroll | Users see available posts|
 |The landing page loads  |Users click on news link in the navbar|Users are directed to the news view where they can view current news and research on dementia|
 |The landing page loads  |Users click on dementia care link in the navbar|Users are directed to the dementia care template where they can view care tips and other resources|
 |The landing page loads  |Users click on selfcare link in the navbar|Users are directed to the selfcare template where they can view selfcare tips and other resources|
-|The landing page loads  |Users click on sign in button|Users are directed to sign in/register view, users sign in if they have an account or click on the sign up link to create an account|
-|The landing page loads  |Users click on profile navbar link|Users see they profiles and options to edit or upload profile image|
-|The post page loads     |Users click on read and comment link|Users see full post and options to edit, delete, or comment on post|
+|The landing page loads  |Users click on posts link in the navbar|Users are directed to the posts template where they can view available posts|
+|The landing page loads  |Users click on about link in the navbar|Users are directed to the about template where they learn more about the app|
+|The landing page loads  |Users click on info link in the navbar|Users are directed to the info template where they learn more about dementia|
+|The landing page loads  |Users click on login in navbar link|Users are directed to sign in/register view, users sign in if they have an account or click on the sign up link to create an account|
+|The landing page loads  |Users click on account navbar link|Users see they profiles and options to edit or upload profile image|
+|The post page loads     |Users click on post title|Users see full post and options to edit, delete, or comment on post|
 |The landing page loads  |Users click on sign out link in the navbar|Users are logged out|
 
 ## setup /Installation Requirements
@@ -74,6 +80,8 @@ You are free to suggest and improve the code. To make your changes:
 * Create a pull request
 * You can also contact the creators via email: njihiamary11@gmail.com, dennismwaniki67@gmail.com, nungari100@gmail.com, murimimaureen8@gmail.com
 
+## Demo Link
+You can view the working demo here: https://dementia-care-and-selfcare.herokuapp.com/
 ## License
 
 [MIT License](LICENSE.md)
