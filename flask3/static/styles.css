@@ -1,6 +1,6 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: large;
+    font-family: 'Exo', sans-serif;
+    font-size: medium;
 }
 h3{
     color: purple;
@@ -16,10 +16,13 @@ h3{
     background-attachment: fixed;
     height: 150px;
     text-align: center;
+    color: #E0E0E0;
 }
 
 h2 {
-    text-decoration: solid underline black;
+    margin-top: 30px; 
+    color: rgb(41, 82, 170);
+    text-align: center;
 }
 
 blockquote {
