@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+{% endblock %}
+
+{% block content %}
+<br><br>
+<div class ="info" ><br>
+    <h1 class="text-center" >Alzheimer's & Dementia </h1>
+</div><hr>
+<div class="container">
+    <h2 >What is Dimentia</h2>
+    <p>Dimentia is a group of symptoms that affects mental cognitive tasks such as memory and reasoning.</p>
+    <p> It is a progressive disease that destroys memory and other important mental functions.</p>
+    <p>Although dementia mainly affects older people, it is not a normal part of ageing.</p>
+
+    <h2>Causes of Dimentia</h2>
+    <p>Dementia is caused by damage to or loss of nerve cells and their connections in the brain.</p>
+    <p><strong>Risk factors</strong></p>
+    <ol>
+        <li><b>Age:</b>Increasing age is the greatest known risk factor for Alzheimer's disease.</li>
+        <li><b>Past head trauma.</b></li>
+        <li><b>Lifelong learning and social engagement.</b></li>
+        <li><b>Poor sleep</b> patterns such as difficulty falling asleep or staying asleep,.</li>
+        <li><b>Lifestyle and heart health:</b> Obesity, High blood pressure and Exposure to smoking and drugs.</li>
+    </ol>
+
+    <h2 >Stages of Dimentia</h2>
+    <p>Understanding each stage can help make these transitions a little easier on you and your loved one</p>
+    <h4><strong>Stage 1</strong>:&nbsp;<strong>No impairment</strong></h4>
+    <p>In this stage there are no symptoms of cognitive impairment, mental function is normal</p>
+    <h4><strong>Stage 2</strong>:&nbsp;<strong>Very mild cognitive decline</strong></h4>
+    <p>In this stage, one seems to forget everyday phrases and the location of important objects such as keys. </p>
+    <h4><strong>Stage 3</strong>:&nbsp;<strong>Mild cognitive decline</strong></h4>
+    <p>In this stage, one seems to be forgetful, have verbal repetition and poor concentration.</p>
+    <h4><strong>Stage 4</strong>:&nbsp;<strong>Moderate cognitive decline</strong></h4>
+    <p>In this stage, the symptoms are now more noticable: Social withdrawal, Denial, Trouble wit routine tasks and
+        moodiness.</p>
+    <h4><strong>Stage 5</strong>:&nbsp;<strong>Moderately severe cognitive decline</strong></h4>
+    <p>In this stage,your loved one may need help with basic things like dressing. They may tend to be confused and have
+        memory loss of personal details and current events.</p>
+    <h4><strong>Stage 6</strong>:&nbsp;<strong> Severe cognitive decline</strong></h4>
+    <p>In this stage, your loved one is dependent on you. They may even have anxiety, difficulty in sleeping and also
+        have difficulty in recognizing their loved ones.</p>
+    <h4><strong>Stage 7</strong>:&nbsp;<strong>Very severe cognitive decline</strong></h4>
+    <p>In this stage,your loved one is unable to care for themselves, lives with severe motor and communication
+        impairment, and may lose the ability to speak or walk.</p>
+
+    <h2 > Treatment and care</h2>
+    <p>There is no treatment currently available to cure dementia or to alter its progressive course. .</p>
+    <p>However, much can be offered to support and improve the lives of people with dementia such as :</p>
+    <ol>
+        <li><b>Enhance communication:</b> By talking with your loved one, maintain eye contact. Speak slowly in simple
+            sentences, and don't rush the response.</li>
+        <li><b>Engage in Therapy</b> such as art, music and pet therapy.</li>
+        <li><b>Encourage exercise:</b> Exercise improves strength and balance. </li>
+        <li>Your doctor might prescribe medications to treat other symptoms or conditions, such as depression, sleep
+            disturbances or agitation.</li>
+    </ol>
+
+    <blockquote class="quote-box text-center primary-color">
+        <p>I’m a person. I have thoughts, emotions, wishes, and needs.
+            When you label me a ‘patient,’ ‘victim,’ or ‘sufferer,’ I feel minimized.
+            My choices, self-determination, dignity, and privacy are fundamental to my well-being. 
+            Therefore I may need and welcome your support, but please do not substitute your decisions for mine</p>
+    </blockquote>
+
+    <p>For more information you can check out:
+        <ul>
+            <li><a href="https://daanow.org/daa-blogs-and-news/">Recent blogs on Dimensia</a></li>
+            <li><a href="https://alzkenya.org/dementia/">Current news on Dimensia</a></li>
+            <li><a href="https://www.the-scientist.com/news-opinion">The scientist</a></li>
+            <li><a href="https://www.who.int/news-room/fact-sheets/detail/dementia">WHO news on Dimensia</a></li>
+        </ul>
+    </p>
+</div>
+
+{% endblock %}
