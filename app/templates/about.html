@@ -3,16 +3,19 @@
 {% block styles %}
 {{super()}}
 <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+<link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}">
 {% endblock %}
 
 {% block content %}
 <div class="jumbotron"><br><br><br><br><br>
     <h1 class="align-middle">About us</h1>
 </div><br>
-<div class="container " >
-    <p><strong>Our Vision</strong>: A world without Alzheimer's and all other dementia.</p>
-    <p><strong>Our Mission</strong>: Raise awareness on Dementia in Kenya.</p>
-    <p><strong>What we do?</strong></p>
+<div class="container">
+    <h3><strong>Our Vision</strong></h3>
+        <p>A world without Alzheimer's and all other dementia.</p>
+    <h3><strong>Our Mission</strong></h3>
+        <p>Raise awareness on Dementia in Kenya.</p>
+    <h3><strong>What we do:</strong></h3>
     <ul>
         <li>We provide articles and resources on Dimensia.</li>
         <li>We address misconceptions on Dimensia by researching on it and offering the latest news on it.</li>
