@@ -17,7 +17,16 @@
                 <li><a href="{{url_for('dementia')}}">News</a></li>
                 <li><a href="{{url_for('dementia_care')}}">Dementia Care</a></li>
                 <li><a href="{{url_for('selfcare')}}">Selfcare</a></li>
+                {% if current_user.is_authenticated %}
+                <li><a class="nav-item nav-link" href="{{ url_for('new_post') }}">New blog</a></li>
+                <li><a class="nav-item nav-link" href="{{ url_for('account') }}">Account</a></li>
+                <li><a class="nav-item nav-link" href="{{ url_for('logout') }}">Logout</a></li>
+                {% else %}
+                <li><a class="nav-item nav-link" href="{{ url_for('login') }}">Login</a></li>
+                <li><a class="nav-item nav-link" href="{{ url_for('register') }}">Register</a></li>
+                {% endif %}
             </ul>
         </div>
     </div>
+  </div>
 </nav>

@@ -1,14 +1,14 @@
 {% extends 'base.html' %}
 
 {% block title %}
-    <link href="https://fonts.googleapis.com/css2?family=Exo&display=swap" rel="stylesheet">
-    
+<link href="https://fonts.googleapis.com/css2?family=Exo&display=swap" rel="stylesheet">
+
 {% endblock %}
 
 {% block styles %}
-    {{super()}}
-    <link rel="stylesheet" href="{{url_for('static',filename='dementia.css')}}">
-    
+{{super()}}
+<link rel="stylesheet" href="{{url_for('static',filename='dementia.css')}}">
+
 {% endblock %}
 
 {% block content %}
@@ -20,22 +20,35 @@
     <hr>
     <div class="row">
         <div class="col-md-9">
-            <img src="https://bit.ly/3fDTNWy" alt="elderly person and nurse" class="img-responsive" style="margin-bottom: 8px;">
-            <p style="text-indent: 25px;">Taking care of a loved one with dementia is a daunting task that requires patience. There are a couple of strategies that you can use to reduce the frustration associated with the care of dementia peoties.</p>
+            <img src="https://bit.ly/3fDTNWy" alt="elderly person and nurse" class="img-responsive"
+                style="margin-bottom: 8px;">
+            <p style="text-indent: 25px;">Taking care of a loved one with dementia is a daunting task that requires
+                patience. There are a couple of strategies that you can use to reduce the frustration associated with
+                the care of dementia peoties.</p>
             <h3 style="margin-top: 30px; color: rgb(41, 82, 170)">Create a Routine</h3>
-            <p style="text-indent: 25px;">The accomplishment of different daily tasks varies across the day. Therefore, performing tasks, such as bathing, during times when patients are most alert could be helpful. Allowing for schedule flexibility for particularly difficult days is also crucial</p>
+            <p style="text-indent: 25px;">The accomplishment of different daily tasks varies across the day. Therefore,
+                performing tasks, such as bathing, during times when patients are most alert could be helpful. Allowing
+                for schedule flexibility for particularly difficult days is also crucial</p>
             <h3 style="margin-top: 30px; color: rgb(41, 82, 170)">Involvement</h3>
-            <p style="text-indent: 25px;">Remember that despite the limitations associated with dementia, dementia patients can still perform some tasks, such as setting the table, with minimal assistance. Therefore, allow the person you are caring for to complete a significant part of the task at hand with minimal assistance</p>
+            <p style="text-indent: 25px;">Remember that despite the limitations associated with dementia, dementia
+                patients can still perform some tasks, such as setting the table, with minimal assistance. Therefore,
+                allow the person you are caring for to complete a significant part of the task at hand with minimal
+                assistance</p>
             <h3 style="margin-top: 30x; color: rgb(41, 82, 170)">Provide Clear and Simple Instructions</h3>
-            <p style="text-indent: 25px;">Proving one-step communication safeguards against confusion and frustration</p>
+            <p style="text-indent: 25px;">Proving one-step communication safeguards against confusion and frustration
+            </p>
             <h3 style="margin-top: 30px; color: rgb(41, 82, 170)">Limit Napping</h3>
-            <p style="text-indent: 25px;">Frequent napping undermines dementia patients ability to differentiate between day and night. Thus, limit multiple and/or prolonged naps</p>
+            <p style="text-indent: 25px;">Frequent napping undermines dementia patients ability to differentiate between
+                day and night. Thus, limit multiple and/or prolonged naps</p>
             <h3 style="margin-top: 30px; color: rgb(41, 82, 170)">Reduce Distractions</h3>
-            <p style="text-indent: 25px;">Dementia impairs a person's ability to concentrate. Limiting distrations,by maybe switching off the TV, during conversations and mealtimes, to an extent, mitigates this effect</p>
-            <h3 style="margin-top: 30px; color: rgb(41, 82, 170)">Remember that Dementia Progression Varies Across Individuals</h3>
-            <p style="text-indent: 25px;">Disease progression and the symptoms that dementia patients experience vary. Thus, you should tailor the provided tips to fit the needs of the person you are taking care of</p>
+            <p style="text-indent: 25px;">Dementia impairs a person's ability to concentrate. Limiting distrations,by
+                maybe switching off the TV, during conversations and mealtimes, to an extent, mitigates this effect</p>
+            <h3 style="margin-top: 30px; color: rgb(41, 82, 170)">Remember that Dementia Progression Varies Across
+                Individuals</h3>
+            <p style="text-indent: 25px;">Disease progression and the symptoms that dementia patients experience vary.
+                Thus, you should tailor the provided tips to fit the needs of the person you are taking care of</p>
             <p style="text-align: right;"><i>Source: Mayo Clinic</i></p>
-            
+
         </div>
         <div class="col-md-3">
             <div class="card" style="margin-top: 10px; background-color: rgb(235, 229, 222);">
@@ -45,15 +58,30 @@
                 </div>
                 <div class="card-body">
                     <ul>
-                        <li><p><a href="https://www.mayoclinic.org/healthy-lifestyle/caregivers/in-depth/alzheimers-caregiver/art-20047577" target="_blank">Mayo Clinic</a></p></li>
-                        <li><p><a href="https://www.nhs.uk/conditions/dementia/carers/" target="_blank">NHS</a></p></li>
-                        <li><p><a href="https://www.alzheimers.net/caring-for-someone-with-dementia/" target="_blank">Alzheimers.net</a></p></li>
-                        <li><p><a href="https://www.alzheimers.org.uk/get-support/publications-factsheets/caring-person-dementia-practical-guide" target="_blank">Alzheimer's Society</a></p></li>
-                        <li><p><a href="https://alzkenya.org/" target="_blank">Alzheimer's & Dementia Organisation Kenya</a></p></li>
+                        <li>
+                            <p><a href="https://www.mayoclinic.org/healthy-lifestyle/caregivers/in-depth/alzheimers-caregiver/art-20047577"
+                                    target="_blank">Mayo Clinic</a></p>
+                        </li>
+                        <li>
+                            <p><a href="https://www.nhs.uk/conditions/dementia/carers/" target="_blank">NHS</a></p>
+                        </li>
+                        <li>
+                            <p><a href="https://www.alzheimers.net/caring-for-someone-with-dementia/"
+                                    target="_blank">Alzheimers.net</a></p>
+                        </li>
+                        <li>
+                            <p><a href="https://www.alzheimers.org.uk/get-support/publications-factsheets/caring-person-dementia-practical-guide"
+                                    target="_blank">Alzheimer's Society</a></p>
+                        </li>
+                        <li>
+                            <p><a href="https://alzkenya.org/" target="_blank">Alzheimer's & Dementia Organisation
+                                    Kenya</a></p>
+                        </li>
                     </ul>
                     <hr>
                     <h3 style="text-align: center; color: rgb(41, 82, 170)">Local Support Group</h3>
-                    <p>Alzheimer's & Dementia Organisation Kenya facilitates support groups for carers <a href="https://alzkenya.org/" target="_blank">every third saturday of the month</a></p>
+                    <p>Alzheimer's & Dementia Organisation Kenya facilitates support groups for carers <a
+                            href="https://alzkenya.org/" target="_blank">every third saturday of the month</a></p>
                 </div>
             </div>
         </div>

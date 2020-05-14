@@ -1,60 +1,80 @@
 {% extends 'base.html' %}
 
 {% block title %}
-    <link href="https://fonts.googleapis.com/css2?family=Exo&display=swap" rel="stylesheet">
-    
+<link href="https://fonts.googleapis.com/css2?family=Exo&display=swap" rel="stylesheet">
+
 {% endblock %}
 
 {% block styles %}
-    {{super()}}
-    <link rel="stylesheet" href="{{url_for('static',filename='selfcare.css')}}">
-    
+{{super()}}
+<link rel="stylesheet" href="{{url_for('static',filename='selfcare.css')}}">
+
 {% endblock %}
 
 {% block content %}
-    <div class="jumbotron">
-        <h1>Selfcare</h1>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-9">
-                <p>Your ability to care for a loved one with dementia is contingent on your physical and psychological health. There are various techniques that you can use to maintain you wellbeing</p>
-                <h3 style="color: rgb(41, 82, 170); text-align: center;">Ask for Help</h3>
-                <p style="text-indent: 25px;">Remember that everyone needs help every now and then and you don't have to do everything yourself. So don't be afraid to ask friends and family for help and to use local and national resources, including support groups</p>
-                <h3 style="color: rgb(41, 82, 170); text-align: center;">Identify Useful Stress Coping Mechanisms</h3>
-                <p style="text-indent: 25px;">Taking care of a loved with dementia can at times be frustrating and you may feel discouraged, confused, angry, or lonely. These emotions are normal.</p>
-                <p>Usesful tips</p>
-                <ul>
-                    <li><p>Remind yourself that you are doing everything you can</p></li>
-                    <li><p>Remember that you are not perfect, no one is, and that is okay</p></li>
-                    <li><p>Remember that there are events and things that are out of your control</p></li>
-                    <li><p>Remember to enjoy the peaceful moments that you experience</p></li>
-                    <li><p>Remember that it is okay to feel sad, powerless, and experience a sense of loss</p></li>
-                    <li><p>Understand why you have chosen to be a carer</p></li>
-                </ul>
-                <h3 style="color: rgb(41, 82, 170); text-align: center;">Get Professional Help</h3>
-                <p style="text-indent: 25px;">Trained mental professionals create safe spaces where you can work through the emotions and stress that you are experiencing. These professionals also create environments in which you can process unexpected events and plan for all possible outcomes</p>
-                <p style="text-align: right;"><i>Source: National Institute on Aging</i></p>
-                <hr>
-                
-            </div>
-            <div class="col-md-3">
-                <div class="card" style="background-color: rgb(235, 229, 222);">
-                    <div class="card-title">
-                        <h3 style="color: rgb(41, 82, 170); text-align: center;">Additional Resources</h3>  
-                    </div>
-                    <div class="card-body">
-                        <ul>
-                            <li><a href="http://www.icarefamily.com/" target="_blank">iCare</a></li>
-                            <li><a href="https://www.aarp.org/caregiving/life-balance/?migration=rdrct" target="_blank">AARP</a></li>
-                            <li><a href="https://www.nia.nih.gov/health/alzheimers-caregiving-caring-yourself" target="_blank">National Institute on Aging</a></li>
-                        </ul>
-                    </div>
+<div class="jumbotron">
+    <h1>Selfcare</h1>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <p>Your ability to care for a loved one with dementia is contingent on your physical and psychological
+                health. There are various techniques that you can use to maintain you wellbeing</p>
+            <h3 style="color: rgb(41, 82, 170); text-align: center;">Ask for Help</h3>
+            <p style="text-indent: 25px;">Remember that everyone needs help every now and then and you don't have to do
+                everything yourself. So don't be afraid to ask friends and family for help and to use local and national
+                resources, including support groups</p>
+            <h3 style="color: rgb(41, 82, 170); text-align: center;">Identify Useful Stress Coping Mechanisms</h3>
+            <p style="text-indent: 25px;">Taking care of a loved with dementia can at times be frustrating and you may
+                feel discouraged, confused, angry, or lonely. These emotions are normal.</p>
+            <p>Usesful tips</p>
+            <ul>
+                <li>
+                    <p>Remind yourself that you are doing everything you can</p>
+                </li>
+                <li>
+                    <p>Remember that you are not perfect, no one is, and that is okay</p>
+                </li>
+                <li>
+                    <p>Remember that there are events and things that are out of your control</p>
+                </li>
+                <li>
+                    <p>Remember to enjoy the peaceful moments that you experience</p>
+                </li>
+                <li>
+                    <p>Remember that it is okay to feel sad, powerless, and experience a sense of loss</p>
+                </li>
+                <li>
+                    <p>Understand why you have chosen to be a carer</p>
+                </li>
+            </ul>
+            <h3 style="color: rgb(41, 82, 170); text-align: center;">Get Professional Help</h3>
+            <p style="text-indent: 25px;">Trained mental professionals create safe spaces where you can work through the
+                emotions and stress that you are experiencing. These professionals also create environments in which you
+                can process unexpected events and plan for all possible outcomes</p>
+            <p style="text-align: right;"><i>Source: National Institute on Aging</i></p>
+            <hr>
+
+        </div>
+        <div class="col-md-3">
+            <div class="card" style="background-color: rgb(235, 229, 222);">
+                <div class="card-title">
+                    <h3 style="color: rgb(41, 82, 170); text-align: center;">Additional Resources</h3>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li><a href="http://www.icarefamily.com/" target="_blank">iCare</a></li>
+                        <li><a href="https://www.aarp.org/caregiving/life-balance/?migration=rdrct"
+                                target="_blank">AARP</a></li>
+                        <li><a href="https://www.nia.nih.gov/health/alzheimers-caregiving-caring-yourself"
+                                target="_blank">National Institute on Aging</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
-        
-       
-        
     </div>
+
+
+
+</div>
 {% endblock %}
