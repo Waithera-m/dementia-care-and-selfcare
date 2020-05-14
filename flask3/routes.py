@@ -8,6 +8,11 @@ from flask3.forms import RegistrationForm, LoginForm,UpdateAccountForm,PostForm,
 from flask3.models import DementiaNews,User,Post,Comment
 from flask3.request import get_topics
 from flask_login import login_user,current_user,logout_user,login_required
+from flask_admin import Admin
+from flask_admin.contrib.sqla import ModelView
+
+admin=Admin(app)
+admin.add_view(ModelView(User,db.session))
 
 
 @app.route('/')
