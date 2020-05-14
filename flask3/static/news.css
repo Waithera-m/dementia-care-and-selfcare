@@ -7,18 +7,13 @@
     url('https://bit.ly/2T2Q0IT');
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
-    height: 500px;
+    height: 300px;
     text-align: center;
     color: aliceblue;
     font-family: 'Exo', sans-serif;
     font-size: larger;
 }
   
-body {
-  font-family: 'Exo', sans-serif;
-  font-size: medium;
-}
 @media (min-width: 576px) {
     .jumbotron {
       padding: 4rem 2rem;

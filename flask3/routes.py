@@ -105,7 +105,6 @@ def save_picture(form_picture):
 
     return picture_fn
 
-
 @app.route("/account", methods=['GET', 'POST'])
 @login_required
 def account():
@@ -123,10 +122,7 @@ def account():
         form.username.data = current_user.username
         form.email.data = current_user.email
     image_file = url_for('static', filename='profile_pics/' + current_user.image_file)
-    return render_template('account.html', title='Account',
-                           image_file=image_file, form=form)
-
-
+    return render_template('account.html', title='Account', image_file=image_file, form=form)
 
 @app.route("/post/new", methods=['GET', 'POST'])
 @login_required
@@ -138,8 +134,7 @@ def new_post():
         db.session.commit()
         flash('Your post has been created!', 'success')
         return redirect(url_for('home'))
-    return render_template('create_post.html', title='New Post',
-                           form=form, legend='New Post')
+    return render_template('create_post.html', title='New Post', form=form, legend='New Post')
 
 
 @app.route("/post/<int:post_id>", methods=["POST", "GET"])
@@ -154,6 +149,7 @@ def post(post_id):
         flash('Your comment has been created!', 'success')
         return redirect(url_for('home'))
     return render_template('post.html', title=post.title, post=post, form=form, comments=comments)
+
 @app.route("/post/<int:post_id>/update", methods=['GET', 'POST'])
 @login_required
 def update_post(post_id):
@@ -170,8 +166,8 @@ def update_post(post_id):
     elif request.method == 'GET':
         form.title.data = post.title
         form.content.data = post.content
-    return render_template('create_post.html', title='Update Post',
-                           form=form, legend='Update Post')
+    return render_template('create_post.html', title='Update Post', form=form, legend='Update Post')
+
 @app.route("/post/<int:post_id>/delete", methods=['POST'])
 @login_required
 def delete_post(post_id):
@@ -182,6 +178,7 @@ def delete_post(post_id):
     db.session.commit()
     flash('Your post has been deleted!', 'success')
     return redirect(url_for('home'))
+
 @app.route("/user/<string:username>")
 def user_posts(username):
     page = request.args.get('page', 1, type=int)
@@ -190,3 +187,33 @@ def user_posts(username):
         .order_by(Post.date_posted.desc())\
         .paginate(page=page, per_page=5)
     return render_template('user_posts.html', posts=posts, user=user)
+    
+@app.route('/about')
+def about():
+    title='About Us'
+    return render_template('about.html',title=title)
+
+@app.route('/info')
+def info():
+
+    '''
+    view function returns index template and its contents
+    '''
+    title='Information on Dimentia'
+    
+    return render_template('info.html',title=title)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
