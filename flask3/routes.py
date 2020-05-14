@@ -148,7 +148,7 @@ def post(post_id):
     comments = Comment.query.all()
     form = CommentForm()
     if form.validate_on_submit():
-        comments = Comment(content=form.content.data, author=current_user)
+        comments = Comment(title=form.title.data,content=form.content.data, author=current_user)
         db.session.add(comments)
         db.session.commit()
         flash('Your comment has been created!', 'success')
