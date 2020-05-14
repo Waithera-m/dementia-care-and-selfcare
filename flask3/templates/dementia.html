@@ -3,66 +3,106 @@
 {% import 'macros.html' as macro %}
 
 {% block title %}
-  
+
 {% endblock %}
 
 {% block styles %}
-    {{super()}}
-    <link rel="stylesheet" href="{{url_for('static',filename='index.css')}}">
+{{super()}}
+<link rel="stylesheet" href="{{url_for('static',filename='index.css')}}">
 {% endblock %}
 
 {% block content %}
-    <div class="jumbotron">
-        <h1>Dementia News & Research</h1>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8">
-                <h2 style="text-align: center;">News</h2>
-                <hr>
-                {{macro.displayHeadlinesResults(dementia_list)}} 
-            </div>
-            <div class="col-md-4">
-                <h2 style="text-align: center;">Research</h2>
-                <hr>
-                <h3>Fatty Acids and the Treament of Dementia</h3>
-                <p>Omega‐3 polyunsaturated fatty acids (omega‐3 PUFAs) are assumed to have a beneficial effect on the function of the brain. It has been suggested that they might improve or delay decline in memory and ability to carry out everyday tasks in people with dementia...<a href="https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD009002.pub3/full" target='_blank'>Read Article</a></p>
-                <hr>
-                <h3>Diabetes and Dementia</h3>
-                <p>Type 2 diabetes mellitus — a form of diabetes which becomes commoner with older age — increases the risk of developing dementia...<a href="https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD003804.pub2/full" target='_blank'>Read Article</a></p>
-                <hr>
-                <h3>Sleep Disorders & Dementia</h3>
-                <p>Dementia is associated with sleep and circadian disturbances, worse than the expected gradual sleep quality with aging[1], which negatively affect patient quality of life and increase caregiver burden...<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5363179/" target='_blank'>Read Article</a></p>
-                <hr>
-                <h3>Treatment Options</h3>
-                <p>Although pharmacotherapies appear to slow aspects of cognitive impairment in both AD and PD, the benefits are often marginal and non-sustained. These shortcomings have led to the evaluation of non-pharmacological and novel treatments for both AD and PD...<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4876589/" target='_blank'>Read Article</a></p>
-                <hr>
-                <h3>Aromatherapy & Dementia</h3>
-                <p>One of the most common symptoms observed in patients with dementia is agitation, and several non-pharmacological treatments have been used to control this symptom...<a href="https://link.springer.com/article/10.1186/s12906-015-0612-9" target='_blank'>Read Article</a></p>
-                <hr>
-                <h3>Ginkgo Biloba Extract & Dementia Treatment</h3>
-                <p>The benefit of Ginkgo biloba for the treatment of dementia remains controversial...<a href="https://jphcs.biomedcentral.com/articles/10.1186/s40780-015-0014-7" target='_blank'>Read Article</a></p>
-                <hr>
-                <h3>Natural Pytochemicals & Dementia Treatment</h3>
-                <p>The word dementia describes a class of heterogeneous diseases which etiopathogenetic mechanisms are not well understood...<a href="https://www.mdpi.com/1420-3049/21/4/518/htm" target='_blank'>Read Article</a></p>
-                <hr>
-                <h3>Advance Care Planning</h3>
-                <p>When a person with dementia (PWD) has lost the ability to make treatment decisions, clinicians often rely on family carers to know and articulate these preferences with assumed accuracy...<a href="https://journals.plos.org/plosone/article/file?type=printable&id=10.1371/journal.pone.0159056" target='_blank'>Read Article</a></p>
-                <hr>
-                <h3>Bipolar Disorder & Dementia</h3>
-                <p>Compared with non-use, 301–365 days of lithium exposure was associated with significantly reduced dementia risk...<a href="https://pdfs.semanticscholar.org/36e2/d855dd4e277b92930fd57f849b6ca4d6f68b.pdf" target='_blank'>Read Article</a></p>
-                <h3>Trends in Diagnosis & Treatment of Dementia</h3>
-                <p>In 2014, 850 000 people in the UK were estimated to have dementia, supported by approximately 540 000 family carers.1 These numbers are set to rise markedly both in the developed and in the developing world as the population ages in the coming decades...<a href="https://www.sciencedirect.com/science/article/pii/S2468266717300312" target='_blank'>Read Article</a></p>
-                <h3>Reminiscence Therapy & Dementia</h3>
-                <p>The effects of reminiscence interventions are inconsistent, often small in size and can differ considerably across settings and modalities...<a href="https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD001120.pub3/full?highlightAbstract=reminiscent&highlightAbstract=reminisc" target='_blank'>Read Article</a></p>
-                <hr>
-                <h3>Home Support for People with Dementia</h3>
-                <p>There is some evidence that case management is beneficial at improving some outcomes at certain time points, both in the person with dementia and in their carer...<a href="https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD008345.pub2/pdf/CDSR/CD008345/CD008345_standard.pdf" target='_blank'>Read Article</a></p>
-                <hr>
-                <h3>Public's Understanding of Dementia Prevention & Treatment</h3>
-                <p>Approximately 47 million people worldwide are living with dementia (otherwise known as major neurocognitive disorder) and a new diagnosis is given every three seconds [1]. While research has not yet discovered a cure, there is accumulating evidence about the potential to prevent approximately one third of cases of dementia with management of risk factors such as poor educational attainment, hypertension, and depression...<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5908164/" target='_blank'>Read Article</a></p>
-            </div>
+<div class="jumbotron">
+    <h1>Dementia News & Research</h1>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <h2 style="text-align: center;">News</h2>
+            <hr>
+            {{macro.displayHeadlinesResults(dementia_list)}}
         </div>
-        
+        <div class="col-md-4">
+            <h2 style="text-align: center;">Research</h2>
+            <hr>
+            <h3>Fatty Acids and the Treament of Dementia</h3>
+            <p>Omega‐3 polyunsaturated fatty acids (omega‐3 PUFAs) are assumed to have a beneficial effect on the
+                function of the brain. It has been suggested that they might improve or delay decline in memory and
+                ability to carry out everyday tasks in people with dementia...<a
+                    href="https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD009002.pub3/full"
+                    target='_blank'>Read Article</a></p>
+            <hr>
+            <h3>Diabetes and Dementia</h3>
+            <p>Type 2 diabetes mellitus — a form of diabetes which becomes commoner with older age — increases the risk
+                of developing dementia...<a
+                    href="https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD003804.pub2/full"
+                    target='_blank'>Read Article</a></p>
+            <hr>
+            <h3>Sleep Disorders & Dementia</h3>
+            <p>Dementia is associated with sleep and circadian disturbances, worse than the expected gradual sleep
+                quality with aging[1], which negatively affect patient quality of life and increase caregiver
+                burden...<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5363179/" target='_blank'>Read
+                    Article</a></p>
+            <hr>
+            <h3>Treatment Options</h3>
+            <p>Although pharmacotherapies appear to slow aspects of cognitive impairment in both AD and PD, the benefits
+                are often marginal and non-sustained. These shortcomings have led to the evaluation of
+                non-pharmacological and novel treatments for both AD and PD...<a
+                    href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4876589/" target='_blank'>Read Article</a></p>
+            <hr>
+            <h3>Aromatherapy & Dementia</h3>
+            <p>One of the most common symptoms observed in patients with dementia is agitation, and several
+                non-pharmacological treatments have been used to control this symptom...<a
+                    href="https://link.springer.com/article/10.1186/s12906-015-0612-9" target='_blank'>Read Article</a>
+            </p>
+            <hr>
+            <h3>Ginkgo Biloba Extract & Dementia Treatment</h3>
+            <p>The benefit of Ginkgo biloba for the treatment of dementia remains controversial...<a
+                    href="https://jphcs.biomedcentral.com/articles/10.1186/s40780-015-0014-7" target='_blank'>Read
+                    Article</a></p>
+            <hr>
+            <h3>Natural Pytochemicals & Dementia Treatment</h3>
+            <p>The word dementia describes a class of heterogeneous diseases which etiopathogenetic mechanisms are not
+                well understood...<a href="https://www.mdpi.com/1420-3049/21/4/518/htm" target='_blank'>Read Article</a>
+            </p>
+            <hr>
+            <h3>Advance Care Planning</h3>
+            <p>When a person with dementia (PWD) has lost the ability to make treatment decisions, clinicians often rely
+                on family carers to know and articulate these preferences with assumed accuracy...<a
+                    href="https://journals.plos.org/plosone/article/file?type=printable&id=10.1371/journal.pone.0159056"
+                    target='_blank'>Read Article</a></p>
+            <hr>
+            <h3>Bipolar Disorder & Dementia</h3>
+            <p>Compared with non-use, 301–365 days of lithium exposure was associated with significantly reduced
+                dementia risk...<a href="https://pdfs.semanticscholar.org/36e2/d855dd4e277b92930fd57f849b6ca4d6f68b.pdf"
+                    target='_blank'>Read Article</a></p>
+            <h3>Trends in Diagnosis & Treatment of Dementia</h3>
+            <p>In 2014, 850 000 people in the UK were estimated to have dementia, supported by approximately 540 000
+                family carers.1 These numbers are set to rise markedly both in the developed and in the developing world
+                as the population ages in the coming decades...<a
+                    href="https://www.sciencedirect.com/science/article/pii/S2468266717300312" target='_blank'>Read
+                    Article</a></p>
+            <h3>Reminiscence Therapy & Dementia</h3>
+            <p>The effects of reminiscence interventions are inconsistent, often small in size and can differ
+                considerably across settings and modalities...<a
+                    href="https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD001120.pub3/full?highlightAbstract=reminiscent&highlightAbstract=reminisc"
+                    target='_blank'>Read Article</a></p>
+            <hr>
+            <h3>Home Support for People with Dementia</h3>
+            <p>There is some evidence that case management is beneficial at improving some outcomes at certain time
+                points, both in the person with dementia and in their carer...<a
+                    href="https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD008345.pub2/pdf/CDSR/CD008345/CD008345_standard.pdf"
+                    target='_blank'>Read Article</a></p>
+            <hr>
+            <h3>Public's Understanding of Dementia Prevention & Treatment</h3>
+            <p>Approximately 47 million people worldwide are living with dementia (otherwise known as major
+                neurocognitive disorder) and a new diagnosis is given every three seconds [1]. While research has not
+                yet discovered a cure, there is accumulating evidence about the potential to prevent approximately one
+                third of cases of dementia with management of risk factors such as poor educational attainment,
+                hypertension, and depression...<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5908164/"
+                    target='_blank'>Read Article</a></p>
+        </div>
     </div>
+
+</div>
 {% endblock %}
