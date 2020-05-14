@@ -19,7 +19,7 @@
           <p class="f"> click title to delete or update post</p>
           {% for post in posts.items %}
           <article class="media content-section">
-            <img class="rounded-circle article-img"
+            <img class=" img-responsive rounded-circle article-img"
               src="{{ url_for('static', filename='profile_pics/' + post.author.image_file) }}">
             <div class="media-body">
               <div class="article-metadata">
@@ -29,8 +29,6 @@
               <h2><a class="article-title" href="{{ url_for('post', post_id=post.id) }}">{{ post.title }}</a></h2>
               <p class="article-content">{{ post.content }}</p>
             </div>
-
-            writing comment
 
 
           </article>
